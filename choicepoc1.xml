@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="b5c6c928-4700-4d75-ab08-10309a43e0b4" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="choicepoc1Flow" doc:id="1e3c0e59-f882-483f-ba49-0c79bdc694e6" >
+		<http:listener doc:name="Listener" doc:id="d48f005a-c5ad-457e-867b-8287a9235a29" config-ref="HTTP_Listener_config" path="/test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="89dee17b-cf7e-4e38-a245-7e13e91ea5d7" />
+		<choice doc:name="Choice" doc:id="a353571a-5dd5-42f8-8ebf-6f145e0a196d" >
+			<when expression="1==2">
+				<set-payload value="I am inside when condition" doc:name="Set Payload" doc:id="574ff44f-ea82-4db7-a1c9-943d2ab4852a" />
+			</when>
+			<otherwise >
+				<set-payload value="I am inside default condition" doc:name="Set Payload" doc:id="ca8a1ad1-0ea3-47cb-b5b2-47f4b0aea48b" />
+			</otherwise>
+		</choice>
+		<logger level="INFO" doc:name="Logger" doc:id="54a6567f-2160-40cb-9f60-1122c1ea67a3" />
+		<logger level="INFO" doc:name="Logger" doc:id="b71bfc66-0254-4a83-8ca9-03d1144b6472" />
+	</flow>
+</mule>
