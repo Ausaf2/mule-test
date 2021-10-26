@@ -7,7 +7,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>businesspoc</name>
+	<name>businesspoc6</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,21 +30,22 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-<cloudHubDeployment>
-      <uri>https://anypoint.mulesoft.com</uri>
-      <muleVersion>4.3.0</muleVersion>
-      <username>Ausaf96</username>
-      <password>Ausaf@2020</password>
-      <applicationName>HassanCollections</applicationName>
-      <workers>1</workers>
-      <environment>Sandbox</environment>
-      <workerType>MICRO</workerType>
-      <objectStoreV2>true</objectStoreV2>
-      <properties>
-        <key>value</key>
-      </properties>
-    </cloudHubDeployment>
-</configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.3.0</muleVersion>
+						<username>Ausaf96</username>
+						<password>Ausaf@2020</password>
+						<applicationName>HassanCollections</applicationName>
+						<workers>1</workers>
+						<environment>Sandbox</environment>
+						<workerType>MICRO</workerType>
+						<objectStoreV2>true</objectStoreV2>
+						<properties>
+							<key>value</key>
+						</properties>
+					</cloudHubDeployment>
+					<classifier>mule-application</classifier>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
