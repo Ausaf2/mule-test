@@ -23,5 +23,6 @@ output application/json
 		<logger level="INFO" doc:name="Logger" doc:id="69abfde9-94d0-4e86-bc1f-9f0d8c1c8e75" message="#[payload]"/>
 		<logger level="INFO" doc:name="Logger" doc:id="5766ad1f-4eef-41c8-81f5-53201c938c7e" />
 		<logger level="INFO" doc:name="Logger" doc:id="c39222a7-e71a-448a-acca-c9f29754349c" />
+		<logger level="INFO" doc:name="Logger" doc:id="0178c6a1-2c54-4d98-a3a0-456026cebde7" />
 	</flow>
 </mule>
